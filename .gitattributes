@@ -1,0 +1,9 @@
+# Normalise line endings in the repository; batch files must stay CRLF for cmd.exe.
+* text=auto
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+*.png binary
+*.ico binary
+*.gif binary
+*.exe binary

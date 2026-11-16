@@ -1,0 +1,23 @@
+# Builds the app with the in-box .NET Framework compiler and runs its self-test.
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and self-test
+        shell: cmd
+        run: MsgOptimizer\build.cmd
+
+      - name: Upload MsgOptimizer.exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: MsgOptimizer
+          path: MsgOptimizer/bin/MsgOptimizer.exe

@@ -1,0 +1,38 @@
+# ---- Build output ----
+obj/
+*.exe
+*.dll
+*.pdb
+
+# ---- Visual Studio / Rider / VS Code ----
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+.vscode/*
+!.vscode/extensions.json
+
+# ---- Local configuration and secrets ----
+# The app keeps its settings and API key in %APPDATA%, never in the repo; these guard against copies.
+.env
+.env.*
+settings.json
+*.pfx
+*.snk
+
+# ---- Logs and temporary files ----
+*.log
+*.tmp
+*.bak
+
+# ---- Windows ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ---- macOS / Linux (contributors' machines) ----
+.DS_Store
+*~
